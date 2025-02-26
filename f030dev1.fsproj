@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--******************************************-->
+<!--   File    : f030dev1.fsproj              -->
+<!--   Format  : TopoR Project file           -->
+<!--   Version : 2                            -->
+<!--   Program : TopoR Lite 7.0.18699         -->
+<!--   Date    : Wednesday, February 26, 2025 -->
+<!--   Time    : 17:19                        -->
+<!--******************************************-->
+
+<Project>
+   <Version current="2"/>
+   <GUID>{33C119E4-FCFB-4F6E-A70E-72914D940667}</GUID>
+   <Documents>
+      <Section name="PCB" isExpanded="true">
+         <File path=".\f030dev1.fsx" isopened="0" dateChange="2025-02-14 15:44:16"/>
+      </Section>
+      <Section name="AutoRouting" isExpanded="true"/>
+   </Documents>
+</Project>
