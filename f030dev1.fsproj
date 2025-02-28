@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--******************************************-->
-<!--   File    : f030dev1.fsproj              -->
-<!--   Format  : TopoR Project file           -->
-<!--   Version : 2                            -->
-<!--   Program : TopoR Lite 7.0.18699         -->
-<!--   Date    : Wednesday, February 26, 2025 -->
-<!--   Time    : 17:19                        -->
-<!--******************************************-->
+<!--***************************************-->
+<!--   File    : f030dev1.fsproj           -->
+<!--   Format  : TopoR Project file        -->
+<!--   Version : 2                         -->
+<!--   Program : TopoR 32 Layer 7.0.18707  -->
+<!--   Date    : Friday, February 14, 2025 -->
+<!--   Time    : 15:27                     -->
+<!--***************************************-->
 
 <Project>
    <Version current="2"/>
@@ -14,7 +14,14 @@
    <Documents>
       <Section name="PCB" isExpanded="true">
          <File path=".\f030dev1.fsx" isopened="0" dateChange="2025-02-14 15:44:16"/>
+         <File path=".\f030dev11.fsx" isopened="1" dateChange="2025-02-14 15:18:21"/>
       </Section>
       <Section name="AutoRouting" isExpanded="true"/>
    </Documents>
+   <Import>
+      <Specctra>
+         <Path name="C:\Users\admin\Documents\KiCad\f030dev1\f030dev1.dsn"/>
+         <Path name="C:\Users\admin\Documents\KiCad\f030dev1\f030dev11.dsn"/>
+      </Specctra>
+   </Import>
 </Project>

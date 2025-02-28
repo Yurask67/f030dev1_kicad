@@ -32,6 +32,9 @@
     )
   )
   (placement
+    (component main:PinHeader_1x04_P2.54mm_Vertical
+      (place J3 135763.000000 -82118.200000 front 90.000000 (PN Conn_01x04_Pin))
+    )
     (component main:PinHeader_1x02_P2.54mm_Vertical
       (place J2 108585.000000 -63500.000000 front 0.000000 (PN Conn_01x02_Pin))
     )
@@ -42,13 +45,13 @@
       (place J1 137700.000000 -64135.000000 front 90.000000 (PN Conn_01x03_Pin))
     )
     (component main:PinHeader_1x06_P2.54mm_Vertical
-      (place J3 130175.000000 -78740.000000 front 180.000000 (PN Conn_01x06_Pin))
+      (place J4 130175.000000 -78740.000000 front 180.000000 (PN Conn_01x06_Pin))
     )
     (component Capacitor_THT:CP_Radial_D7.5mm_P2.50mm::1
       (place C4 120650.000000 -76200.000000 front 180.000000 (PN C_Polarized))
     )
     (component main:PinHeader_2x05_P2.54mm_Vertical
-      (place J4 167540.000000 -75000.000000 front 180.000000 (PN Conn_01x10_Pin))
+      (place J5 167540.000000 -75000.000000 front 180.000000 (PN Conn_01x10_Pin))
     )
     (component "Package_DIP:DIP-16_W7.62mm_LongPads"
       (place U3 157500.000000 -80040.000000 front 180.000000 (PN 74HC595))
@@ -67,6 +70,27 @@
     )
   )
   (library
+    (image main:PinHeader_1x04_P2.54mm_Vertical
+      (outline (path signal 120  -1330 1330  0 1330))
+      (outline (path signal 120  -1330 0  -1330 1330))
+      (outline (path signal 120  -1330 -1270  -1330 -8950))
+      (outline (path signal 120  -1330 -1270  1330 -1270))
+      (outline (path signal 120  -1330 -8950  1330 -8950))
+      (outline (path signal 120  1330 -1270  1330 -8950))
+      (outline (path signal 50  -1800 1800  -1800 -9400))
+      (outline (path signal 50  -1800 -9400  1800 -9400))
+      (outline (path signal 50  1800 1800  -1800 1800))
+      (outline (path signal 50  1800 -9400  1800 1800))
+      (outline (path signal 100  -1270 635  -635 1270))
+      (outline (path signal 100  -1270 -8890  -1270 635))
+      (outline (path signal 100  -635 1270  1270 1270))
+      (outline (path signal 100  1270 1270  1270 -8890))
+      (outline (path signal 100  1270 -8890  -1270 -8890))
+      (pin Rect[A]Pad_2000.000000x2000.000000_um 1 0 0)
+      (pin Oval[A]Pad_2000.000000x2000.000000_um 2 0 -2540)
+      (pin Oval[A]Pad_2000.000000x2000.000000_um 3 0 -5080)
+      (pin Oval[A]Pad_2000.000000x2000.000000_um 4 0 -7620)
+    )
     (image main:PinHeader_1x02_P2.54mm_Vertical
       (outline (path signal 120  -1330 1330  0 1330))
       (outline (path signal 120  -1330 0  -1330 1330))
@@ -808,8 +832,8 @@
     )
   )
   (network
-    (net "unconnected-(U1-PA14-Pad20)"
-      (pins U1-20)
+    (net "Net-(J3-Pin_2)"
+      (pins J3-2 U1-19)
     )
     (net "unconnected-(U1-PA9-Pad17)"
       (pins U1-17)
@@ -818,43 +842,44 @@
       (pins U1-14)
     )
     (net GNDREF
-      (pins J2-2 C1-2 J1-3 J3-6 C4-2 J4-9 J4-10 U3-8 U3-13 C3-1 C2-1 U2-1 U1-1 U1-15)
+      (pins J3-4 J2-2 C1-2 J1-3 J4-6 C4-2 J5-9 J5-10 U3-8 U3-13 C3-1 C2-1 U2-1 U1-1
+        U1-15)
     )
     (net +5V
       (pins J2-1 C1-1 U2-3)
     )
     (net +3.3V
-      (pins J1-1 J3-1 C4-1 U3-10 U3-16 C3-2 C2-2 U2-2 U2-2@1 U1-5 U1-16)
+      (pins J3-1 J1-1 J4-1 C4-1 U3-10 U3-16 C3-2 C2-2 U2-2 U2-2@1 U1-5 U1-16)
     )
     (net RX
       (pins J1-2 U1-6)
     )
     (net button_2
-      (pins J3-3 U1-8)
+      (pins J4-3 U1-8)
     )
     (net button_4
-      (pins J3-5 U1-10)
+      (pins J4-5 U1-10)
     )
     (net "unconnected-(U1-PA10-Pad18)"
       (pins U1-18)
     )
     (net button_1
-      (pins J3-2 U1-7)
+      (pins J4-2 U1-7)
     )
     (net button_3
-      (pins J3-4 U1-9)
+      (pins J4-4 U1-9)
     )
-    (net "Net-(J4-Pin_3)"
-      (pins J4-3 U3-2)
+    (net "Net-(J3-Pin_3)"
+      (pins J3-3 U1-20)
     )
-    (net "Net-(J4-Pin_5)"
-      (pins J4-5 U3-4)
+    (net "Net-(J5-Pin_3)"
+      (pins J5-3 U3-2)
     )
-    (net "Net-(J4-Pin_2)"
-      (pins J4-2 U3-1)
+    (net "Net-(J5-Pin_5)"
+      (pins J5-5 U3-4)
     )
-    (net "unconnected-(U1-PA13-Pad19)"
-      (pins U1-19)
+    (net "Net-(J5-Pin_2)"
+      (pins J5-2 U3-1)
     )
     (net "unconnected-(U1-PF0-Pad2)"
       (pins U1-2)
@@ -862,23 +887,23 @@
     (net "unconnected-(U1-PF1-Pad3)"
       (pins U1-3)
     )
-    (net "Net-(J4-Pin_6)"
-      (pins J4-6 U3-5)
+    (net "Net-(J5-Pin_6)"
+      (pins J5-6 U3-5)
     )
     (net "unconnected-(U1-NRST-Pad4)"
       (pins U1-4)
     )
-    (net "Net-(J4-Pin_1)"
-      (pins J4-1 U3-15)
+    (net "Net-(J5-Pin_1)"
+      (pins J5-1 U3-15)
     )
-    (net "Net-(J4-Pin_4)"
-      (pins J4-4 U3-3)
+    (net "Net-(J5-Pin_4)"
+      (pins J5-4 U3-3)
     )
-    (net "Net-(J4-Pin_8)"
-      (pins J4-8 U3-7)
+    (net "Net-(J5-Pin_8)"
+      (pins J5-8 U3-7)
     )
-    (net "Net-(J4-Pin_7)"
-      (pins J4-7 U3-6)
+    (net "Net-(J5-Pin_7)"
+      (pins J5-7 U3-6)
     )
     (net DAT_595
       (pins U3-14 U1-13)
@@ -892,13 +917,12 @@
     (net "unconnected-(U3-QH'-Pad9)"
       (pins U3-9)
     )
-    (class kicad_default +3.3V +5V CLK_595 CS_595 DAT_595 GNDREF "Net-(J4-Pin_1)"
-      "Net-(J4-Pin_2)" "Net-(J4-Pin_3)" "Net-(J4-Pin_4)" "Net-(J4-Pin_5)"
-      "Net-(J4-Pin_6)" "Net-(J4-Pin_7)" "Net-(J4-Pin_8)" RX button_1 button_2
-      button_3 button_4 "unconnected-(U1-NRST-Pad4)" "unconnected-(U1-PA10-Pad18)"
-      "unconnected-(U1-PA13-Pad19)" "unconnected-(U1-PA14-Pad20)" "unconnected-(U1-PA9-Pad17)"
-      "unconnected-(U1-PB1-Pad14)" "unconnected-(U1-PF0-Pad2)" "unconnected-(U1-PF1-Pad3)"
-      "unconnected-(U3-QH'-Pad9)"
+    (class kicad_default +3.3V +5V CLK_595 CS_595 DAT_595 GNDREF "Net-(J3-Pin_2)"
+      "Net-(J3-Pin_3)" "Net-(J5-Pin_1)" "Net-(J5-Pin_2)" "Net-(J5-Pin_3)"
+      "Net-(J5-Pin_4)" "Net-(J5-Pin_5)" "Net-(J5-Pin_6)" "Net-(J5-Pin_7)"
+      "Net-(J5-Pin_8)" RX button_1 button_2 button_3 button_4 "unconnected-(U1-NRST-Pad4)"
+      "unconnected-(U1-PA10-Pad18)" "unconnected-(U1-PA9-Pad17)" "unconnected-(U1-PB1-Pad14)"
+      "unconnected-(U1-PF0-Pad2)" "unconnected-(U1-PF1-Pad3)" "unconnected-(U3-QH'-Pad9)"
       (circuit
         (use_via "Via[0-1]_600:300_um")
       )
